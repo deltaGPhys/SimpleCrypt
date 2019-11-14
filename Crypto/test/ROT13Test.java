@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class ROT13Test {
@@ -97,4 +99,10 @@ public class ROT13Test {
         assertTrue(actual.equals(Q1));
     }
 
+    @Test
+    public void cryptFileTest() throws IOException {
+        // Given
+        ROT13 cipher = new ROT13('a', 'n');
+        cipher.cryptFile();
+    }
 }
