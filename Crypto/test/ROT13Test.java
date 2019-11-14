@@ -4,6 +4,13 @@ import static org.junit.Assert.*;
 
 public class ROT13Test {
 
+    @Test
+    public void name() {
+        System.out.println('a'+0);
+        System.out.println('z'+0);
+        System.out.println('A'+0);
+        System.out.println('Z'+0);
+    }
 
     @Test
     public void rotateStringTest0() {
@@ -23,7 +30,7 @@ public class ROT13Test {
     public void rotateStringTest1() {
         // Given
         String s1 = "ABCDEF";
-        String s2 = "DEFABC";
+        String s2 = "DEFGHI";
 
         // When
         ROT13 cipher = new ROT13();
@@ -63,6 +70,7 @@ public class ROT13Test {
         String actual = cipher.encrypt(Q1);
         System.out.println(Q1);
         System.out.println(A1);
+        System.out.println(actual);
         // Then
         assertTrue(actual.equals(A1));
 
@@ -70,6 +78,7 @@ public class ROT13Test {
         String actual2 = cipher.decrypt(Q2);
         System.out.println(Q2);
         System.out.println(A2);
+        System.out.println(actual2);
         // Then
         assertTrue(actual2.equals(A2));
     }
